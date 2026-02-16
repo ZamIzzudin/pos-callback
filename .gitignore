@@ -40,3 +40,5 @@ next-env.d.ts
 temp/
 temp_*.*
 *.tmp
+
+/frontend

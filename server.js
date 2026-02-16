@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const callbackRoutes = require('./src/routes/callback');
 const logsRoutes = require('./src/routes/logs');
@@ -8,6 +9,7 @@ const logsRoutes = require('./src/routes/logs');
 const app = express();
 
 // Middleware
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
